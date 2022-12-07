@@ -4,7 +4,6 @@ def part_1(s: str) -> int:
         occurences = set(s[i - 4:i])
         if len(occurences) == 4:
             return i
-
     return -1
 
 
