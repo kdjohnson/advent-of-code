@@ -25,12 +25,12 @@ class TestSum(unittest.TestCase):
         actual = main.treehouse('example.txt', 2)
         self.assertEqual(actual, 8)
 
-    def test_input_pt2_is_x(self):
+    def test_input_pt2_is_535680(self):
         """
-        Test that result is 8.
+        Test that result is 535680.
         """
         actual = main.treehouse('input.txt', 2)
-        self.assertEqual(actual, 8)
+        self.assertEqual(actual, 535680)
 
 
 if __name__ == '__main__':

@@ -25,7 +25,7 @@ def is_visible(field: list[list[int]], i: int, j: int, i_range: int, j_range: in
 def tree_line(field: list[list[int]], i: int, j: int, i_range: int, j_range: int, cell: int) -> int:
     top_tree_line = []
     for t in range(i - 1, -1, -1):
-        if field[t][j] == cell or field[t][j] > cell:
+        if field[t][j] >= cell:
             top_tree_line.append(field[t][j])
             break
 
@@ -34,7 +34,7 @@ def tree_line(field: list[list[int]], i: int, j: int, i_range: int, j_range: int
 
     right_tree_line = []
     for t in range(j + 1, j_range):
-        if field[i][t] == cell or field[i][t] > cell:
+        if field[i][t] >= cell:
             right_tree_line.append(field[i][t])
             break
 
@@ -43,7 +43,7 @@ def tree_line(field: list[list[int]], i: int, j: int, i_range: int, j_range: int
 
     bottom_tree_line = []
     for t in range(i + 1, i_range):
-        if field[t][j] == cell or field[t][j] > cell:
+        if field[t][j] >= cell:
             bottom_tree_line.append(field[t][j])
             break
 
@@ -52,7 +52,7 @@ def tree_line(field: list[list[int]], i: int, j: int, i_range: int, j_range: int
 
     left_tree_line = []
     for t in range(j - 1, -1, -1):
-        if field[i][t] == cell or field[i][t] > cell:
+        if field[i][t] >= cell:
             left_tree_line.append(field[i][t])
             break
 
